@@ -3,8 +3,12 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Removendo IDE
+# IDE
 .idea/
+.vscode/
+
+# Ambiente Virtual
+venv/ 
 
 # C extensions
 *.so

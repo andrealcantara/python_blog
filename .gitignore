@@ -7,9 +7,6 @@ __pycache__/
 .idea/
 .vscode/
 
-# Ambiente Virtual
-venv/ 
-
 # C extensions
 *.so
 

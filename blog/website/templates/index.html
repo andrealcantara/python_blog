@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django teste</title>
+</head>
+<body>
+<h1> Blogol </h1>
+<h2>{{ name }}</h2>
+{{ lista }}
+<ul>
+{% for i in lista %}
+    <li>
+    {% if i == 'Python' %}
+        <b>{{ i }}</b>
+    {% else %}
+        {{ i }}
+    {% endif %}
+
+    </li>
+{% endfor %}
+</ul>
+</body>
+</html>

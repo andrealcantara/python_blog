@@ -1,10 +1,9 @@
 from django.shortcuts import render
-from django.http import request, HttpResponse
-
-
-# Create your views here.
 
 
 def blog_hellow(request):
-    return HttpResponse("Blog");
+     lista = ['Django', 'Python', 'Eu', 'tu', 'eles']
+     data = {'name': 'Passagem de dicionario no Django', 'lista': lista}
+     return render(request, 'index.html', data)
+
 

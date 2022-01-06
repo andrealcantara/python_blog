@@ -20,5 +20,6 @@ from .views import hellow
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hellow/', hellow),
-    path('blog/', include('websites.urls')),
+    path('blog/', include('website.urls')),
+    path('', include('website.urls')),
 ]

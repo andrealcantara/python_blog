@@ -8,7 +8,7 @@ def blog_hellow(request):
      data = {'name': 'Passagem de dicionario no Django',
              'list': list,
              'posts': list_posts}
-     return render(request, 'index.html', data)
+     return render(request, 'main/index_didatico.html', data)
 
 
 def load_index(request):
@@ -16,7 +16,7 @@ def load_index(request):
  #    list_posts = Post.objects.all();
 
     data = {'posts': list_posts}
-    return render(request, 'index.html', data)
+    return render(request, 'main/index.html', data)
 
 
 

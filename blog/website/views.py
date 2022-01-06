@@ -18,6 +18,11 @@ def load_index(request):
     data = {'posts': list_posts}
     return render(request, 'main/index.html', data)
 
+def post_detail(request, id):
+    post = Post.objects.get(id=id)
+    return render(request, 'main/post.html', {'post': post})
+
+
 
 
 

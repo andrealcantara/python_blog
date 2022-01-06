@@ -1,8 +1,9 @@
 
 from django.contrib import admin
 from django.urls import path, include
-from .views import blog_hellow
+from .views import blog_hellow, load_index
 
 urlpatterns = [
-    path('', blog_hellow),
+    path('index_didatico', blog_hellow),
+    path('', load_index),
 ]

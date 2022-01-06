@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django teste</title>
+</head>
+<body>
+<h1> Blogol </h1>
+<h2>{{ name }}</h2>
+{{ list }}
+<ul>
+    {% for i in list %}
+        <li>
+            {% if i == 'Python' %}
+                <b>{{ i }}</b>
+            {% else %}
+                {{ i }}
+            {% endif %}
+
+        </li>
+    {% endfor %}
+</ul>
+<table>
+    <thead>
+    <tr>
+        <th>Titulo</th>
+        <th>Sub Titulo</th>
+        <th>Conteudo</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for post in posts %}
+        <tr>
+            <td>{{ post.title }}</td>
+            <td>{{ post.sub_title }}</td>
+            <td>{{ post.content }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

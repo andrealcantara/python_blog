@@ -12,11 +12,14 @@ class Post(models.Model):
     sub_title = models.CharField(verbose_name='Sub titulo', max_length=200)
     content = models.TextField()
     categorie = models.CharField(
-        verbose_name='Categories',
         max_length=2,
         choices=Categories.choices,
         default=Categories.GR,
+        verbose_name='Categories',
     )
+    approved = models.BooleanField(default=True,
+                                   verbose_name="Aprovado"
+                                   )
 
     def __str__(self):
         return self.title

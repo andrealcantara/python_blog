@@ -12,12 +12,10 @@ def blog_hellow(request):
 
 
 def load_index(request):
-    list = []
-    for i in range(6):
-        list.append({'thumb': 'images/thumbs/0' + str(i + 1) + '.jpg',
-                     'full': 'images/fulls/0' + str(i+1) + '.jpg'})
+    list_posts = Post.objects.filter(approved=True)
+ #    list_posts = Post.objects.all();
 
-    data = {'list_image_post': list}
+    data = {'posts': list_posts}
     return render(request, 'index.html', data)
 
 

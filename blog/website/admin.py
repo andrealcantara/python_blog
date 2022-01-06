@@ -3,8 +3,8 @@ from .models import Post
 
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ['title', 'sub_title', 'categorie', 'approved']
-    search_fields = ['title','sub_title','categorie']
+    list_display = ['title', 'sub_title', 'category', 'approved']
+    search_fields = ['title','sub_title','category']
 
     def get_queryset(self, request):
         return Post.objects.filter(approved=True)

@@ -36,13 +36,14 @@
 
 				<!-- Two -->
 					<section id="two">
-						<h2>Recent Work</h2>
+						<h2>Post</h2>
 						<div class="row">
-                            {% for image in list_image_post %}
+                            {% for post in posts %}
                                 <article class="col-6 col-12-xsmall work-item">
-                                    <a href="{% static  image.full %}" class="image fit thumb"><img src="{% static image.thumb %}" alt="" /></a>
-                                    <h3>Magna sed consequat tempus</h3>
-                                    <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                                    <a href="{% static  'images/fulls/01.jpg' %}" class="image fit thumb"><img src="{% static 'images/thumbs/01.jpg' %}" alt="" /></a>
+                                    <h3>{{ post.title }}</h3>
+                                    <p>{{ post.sub_title }}</p>
+                                    <span>{{ post.get_category_display }}</span>
                                 </article>
 							{% endfor %}
 						</div>

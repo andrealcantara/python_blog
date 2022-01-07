@@ -103,6 +103,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 # https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-MEDIA_ROOT
 MEDIA_URL = "/media/"
 

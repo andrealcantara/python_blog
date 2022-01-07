@@ -9,6 +9,9 @@ __-__old_*
 .idea/
 .vscode/
 
+# Arquivos de Media
+media/
+
 # C extensions
 *.so
 
